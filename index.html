@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#e7deca">
-  <title>墨行山河 // 水墨跑酷</title>
+  <meta name="theme-color" content="#e9ecec">
+  <title>城市疾行 // 矢量跑酷</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -13,56 +13,52 @@
 <body>
   <main class="shell">
     <header class="topbar">
-      <div class="brand" aria-label="墨行山河">
-        <span class="brand-mark" aria-hidden="true">墨</span>
+      <div class="brand" aria-label="城市疾行">
+        <span class="brand-mark" aria-hidden="true">V</span>
         <div>
-          <p class="eyebrow">山水長卷・踏墨而行</p>
-          <h1>墨行山河 <span>／ 水墨跑酷</span></h1>
+          <p class="eyebrow">跑酷模式・城市逃脫</p>
+          <h1>城市疾行 <span>／ VECTOR RUN</span></h1>
         </div>
       </div>
       <div class="status-pill"><span class="status-dot"></span><span id="statusText">蓄勢待發</span></div>
     </header>
 
-    <section class="hud" aria-label="遊戲資訊">
+    <section class="hud" aria-label="跑酷資訊">
       <div class="metric">
-        <span class="metric-label">行旅里程</span>
+        <span class="metric-label">逃脫距離</span>
         <strong id="score">000000</strong>
       </div>
       <div class="metric best-metric">
-        <span class="metric-label">最佳行程</span>
+        <span class="metric-label">個人紀錄</span>
         <strong id="highScore">000000</strong>
       </div>
-      <div class="metric kill-metric">
-        <span class="metric-label">擊退 / 最佳</span>
-        <strong><span id="kills">000</span><small>／ <span id="highKills">000</span></small></strong>
-      </div>
       <div class="metric level-metric">
-        <span class="metric-label">山勢險度</span>
+        <span class="metric-label">跑酷等級</span>
         <strong id="level">01</strong>
       </div>
     </section>
 
-    <section class="game-frame" aria-label="墨行山河遊戲區域">
+    <section class="game-frame" aria-label="城市疾行遊戲區域">
       <div class="scanline" aria-hidden="true"></div>
-      <canvas id="gameCanvas" width="1200" height="520" aria-label="水墨山水間奔跑的遊戲畫面"></canvas>
+      <canvas id="gameCanvas" width="1200" height="520" aria-label="穿越城市街道的跑酷遊戲畫面"></canvas>
+      <img class="chaser-sprite" id="chaserSprite" src="people.gif" alt="" aria-hidden="true" draggable="false">
       <img class="player-sprite" id="playerSprite" src="people.gif" alt="" aria-hidden="true" draggable="false">
       <div class="game-overlay" id="gameOverlay">
         <div class="overlay-card">
-          <span class="overlay-kicker" id="overlayKicker">山水長卷・徐徐展開</span>
-          <h2 id="overlayTitle">踏墨啟程？</h2>
-          <p id="overlayMessage">按下 Space 或 W 躍身避開山石，使用 X 擊退前方的山間守衛。</p>
-          <button class="primary-button" id="startButton" type="button"><span>踏入山河</span><b>↗</b></button>
+          <span class="overlay-kicker" id="overlayKicker">城市邊界・疾速穿越</span>
+          <h2 id="overlayTitle">準備開跑？</h2>
+          <p id="overlayMessage">按下 Space 或 W 跳過沿途障礙，挑戰更遠的距離。</p>
+          <button class="primary-button" id="startButton" type="button"><span>開始跑酷</span><b>↗</b></button>
         </div>
       </div>
     </section>
 
     <footer class="controls">
-      <div class="control-item"><kbd>SPACE</kbd><span>躍身</span></div>
-      <div class="control-item"><kbd>W</kbd><span>躍身</span></div>
-      <div class="control-item"><kbd>X</kbd><span>擊退</span></div>
-      <div class="control-item"><kbd>P</kbd><span>暫歇</span></div>
-      <div class="control-item"><kbd>R</kbd><span>重行</span></div>
-      <div class="footer-note"><span class="signal-bars"><i></i><i></i><i></i><i></i></span> 山河無恙</div>
+      <div class="control-item"><kbd>SPACE</kbd><span>跳躍</span></div>
+      <div class="control-item"><kbd>W</kbd><span>跳躍</span></div>
+      <div class="control-item"><kbd>P</kbd><span>暫停</span></div>
+      <div class="control-item"><kbd>R</kbd><span>重新開始</span></div>
+      <div class="footer-note"><span class="signal-bars"><i></i><i></i><i></i><i></i></span> KEEP MOVING</div>
     </footer>
   </main>
   <script src="script.js"></script>
